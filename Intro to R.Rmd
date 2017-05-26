@@ -1,0 +1,77 @@
+---
+title: "Intro to R"
+author: "Elizabeth Gilbert"
+date: "May 26, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro to R
+
+This is a brief and friendly introduction to R. Please note that while it is always valuable to learn more about how the R language is structured, this introduction intends to get you up and running very quickly.  
+
+This introduction will cover:  
+1. Downloading R and R Studio to code in R  
+2. Basic R syntax  
+3. Using packages for special functionality in R  
+4. Getting started with learning R in R  
+
+### Downloading R and R Studio
+R is what you will download to program in R. R Studio is the most popular IDE (Integrated Development Environment) for R.
+
+* link to R & R studio here
+
+Go ahead and launch your newly-downloaded R Studio and start your first **session** in R
+
+### Basic Syntax
+Now that you have everything ready and R Studio open, you don't want to be left in the dark or turned over to some online course without knowing any code. Here are the very basics of programming in R. 
+
+```{r}
+# The pound symbol starts a comment
+# Comments are useful to describe your code, like this:
+x <- 1 # assigned 1 to variable x
+x # printed x
+```
+
+You just learned comments, initializing variables, and printing variables. Here's what you should know:  
+1. In R, you don't declare a type for your variables; in our example, we didn't specify that variable x was of the type integer.   
+2. Assignment to a variable is done using the <- operator.   
+3. Typing just a variable name will print the contents of that variable.   
+
+```{r}
+View(quakes) 
+View(swiss) 
+View(volcano) 
+View(WorldPhones) 
+View(ChickWeight) 
+```
+
+### Using Packages
+The functions that come with R when you download it are called "Base R". They can do a lot, but there are many more things you can do with R by using packages. 
+
+You have to load them in every new session, but you only have to install them once. 
+
+One of the most useful packages is X. Let's install it now.
+
+* install
+
+Eventually, you will probably accumulate many packages, such as the widely popular ggplot2, which can make fancy grpahics like this:
+
+* example
+
+### Learn R in R
+
+```{r}
+# install.packages("swirl")
+# library(swirl)
+# swirl()
+```
+
+### Conclusion
+You may want to do x, y, or z  
+
+This introduction was written using R Markdown. Markdown is a very simple syntax for formatting HTML, PDF, and Word documents with R code: see <http://rmarkdown.rstudio.com> for more on R Markdown.  
+  
