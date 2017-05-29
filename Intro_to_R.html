@@ -148,8 +148,7 @@ The right hand quadrants contain tabs which will desplay the variables you’ve 
 <div id="basic-syntax" class="section level3">
 <h3>2. Basic Syntax</h3>
 <p>Now that you have everything ready and R Studio open, here are the very basics of programming in R.</p>
-<pre class="r"><code># The pound symbol starts a comment
-# Comments are useful to describe your code, like this:
+<pre class="r"><code># The pound symbol starts a comment, useful to describe your code, like this:
 x &lt;- 1 # assigned 1 to variable x
 x # printed x</code></pre>
 <pre><code>## [1] 1</code></pre>
@@ -175,7 +174,7 @@ x # printed x</code></pre>
 <p>Remember to use double back slashed in your file address, and include the .csv extension at the end of the address.</p>
 <p>R also comes with built in data sets. Some interesting ones are called “quakes”, “swiss”, “volcano”, “WorldPhones”, and “ChickWeight”. These are valuable to play around with and practice your skills on.</p>
 <p>Functions that are valuable for viewing your data include</p>
-<pre class="r"><code># View(df) # opens the data set in a new tab
+<pre class="r"><code>View(df) # opens the data set in a new tab
 head(quakes) # gets the first 6 rows without opening the data in a new tab</code></pre>
 <pre><code>##      lat   long depth mag stations
 ## 1 -20.42 181.62   562 4.8       41
@@ -192,11 +191,11 @@ head(quakes) # gets the first 6 rows without opening the data in a new tab</code
 <h4>Problem Solving</h4>
 <p>One of the other most valuable things to know is how to learn and solve problems that arise when coding in R.<br />
 For packages, you can always go to Help &gt; Cheatsheets in R Studio for PDF cheat sheets on the R packages you have installed. For functions, and the built in R data sets, you can type the function preceeded by a question mark to get help documentation on it in R Studio.</p>
-<pre class="r"><code># ?c # functions
-# ?mean
+<pre class="r"><code>?c # functions
+?mean
 
-# ?quakes # built in data sets
-# ?swiss</code></pre>
+?quakes # built in data sets
+?swiss</code></pre>
 </div>
 </div>
 <div id="using-packages" class="section level3">
@@ -204,15 +203,15 @@ For packages, you can always go to Help &gt; Cheatsheets in R Studio for PDF che
 <p>The functions that come with R when you download it are called “Base R”. They can do a lot, but there are many more things you can do with R by using packages.</p>
 <p>You have to load them in every new session, but you only have to install them once.</p>
 <p>One of the most useful packages for beginners is swirl. Let’s install it now.</p>
-<pre class="r"><code># install.packages(&quot;swirl&quot;)</code></pre>
+<pre class="r"><code>install.packages(&quot;swirl&quot;)</code></pre>
 <p>When installing a new package, remember to use the function install.packages() and include the package name in quotations. Eventually, you will probably accumulate many packages, such as the widely popular ggplot2 for visualization.</p>
 </div>
 <div id="learn-r-in-r" class="section level3">
 <h3>4. Learn R in R</h3>
 <p>Since you already have the swirl package installed, you can load it with</p>
-<pre class="r"><code># library(swirl)</code></pre>
+<pre class="r"><code>library(swirl)</code></pre>
 <p>and then call the swirl function</p>
-<pre class="r"><code># swirl()</code></pre>
+<pre class="r"><code>swirl()</code></pre>
 <p>to launch the tutorial</p>
 <div id="other-topics" class="section level4">
 <h4>Other Topics</h4>
@@ -228,7 +227,7 @@ Knowing that these topics exist should give you the ability to research and lear
 <h3>Conclusion</h3>
 <p>You may now want to try viewing data in R, research and test out the additional R topics listed, or start practicing with the swirl tutorial. Any is a great way to build your experience and comfort in R.</p>
 <p>This introduction was written using R Markdown. Markdown is a very simple syntax for formatting HTML, PDF, and Word documents with R code and can be installed with install.packages(“markdown”). See <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a> for more on R Markdown.</p>
-<p>Created on May 29th, 2017 by Elizabeth Gilbert</p>
+<p>This introduction was created on May 29th, 2017 by Elizabeth Gilbert</p>
 </div>
 </div>
 

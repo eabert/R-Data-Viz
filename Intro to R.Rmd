@@ -32,8 +32,7 @@ The right hand quadrants contain tabs which will desplay the variables you've cr
 ### 2. Basic Syntax
 Now that you have everything ready and R Studio open, here are the very basics of programming in R. 
 ```{r}
-# The pound symbol starts a comment
-# Comments are useful to describe your code, like this:
+# The pound symbol starts a comment, useful to describe your code, like this:
 x <- 1 # assigned 1 to variable x
 x # printed x
 ```
@@ -75,7 +74,7 @@ R also comes with built in data sets. Some interesting ones are called "quakes",
 
 Functions that are valuable for viewing your data include
 ```{r}
-# View(df) # opens the data set in a new tab
+View(df) # opens the data set in a new tab
 head(quakes) # gets the first 6 rows without opening the data in a new tab
 names(swiss) # gets the list of variable names without opening the data in a new tab
 ```
@@ -84,12 +83,12 @@ names(swiss) # gets the list of variable names without opening the data in a new
 One of the other most valuable things to know is how to learn and solve problems that arise when coding in R.  
 For packages, you can always go to Help > Cheatsheets in R Studio for PDF cheat sheets on the R packages you have installed. 
 For functions, and the built in R data sets, you can type the function preceeded by a question mark to get help documentation on it in R Studio. 
-```{r}
-# ?c # functions
-# ?mean
+```{r, eval=FALSE}
+?c # functions
+?mean
 
-# ?quakes # built in data sets
-# ?swiss
+?quakes # built in data sets
+?swiss
 ```
 
 ### 3. Using Packages
@@ -98,8 +97,8 @@ The functions that come with R when you download it are called "Base R". They ca
 You have to load them in every new session, but you only have to install them once. 
 
 One of the most useful packages for beginners is swirl. Let's install it now.
-```{r}
-# install.packages("swirl")
+```{r, eval=FALSE}
+install.packages("swirl")
 ```
 When installing a new package, remember to use the function install.packages() and include the package name in quotations. 
 Eventually, you will probably accumulate many packages, such as the widely popular ggplot2 for visualization.
@@ -113,19 +112,19 @@ Eventually, you will probably accumulate many packages, such as the widely popul
 
 ### 4. Learn R in R
 Since you already have the swirl package installed, you can load it with
-```{r}
-# library(swirl)
+```{r, eval=FALSE}
+library(swirl)
 ```
 and then call the swirl function
-```{r}
-# swirl()
+```{r, eval=FALSE}
+swirl()
 ```
 to launch the tutorial
 
 #### Other Topics
 Three topics that you may consider researching before coming across them in swirl, in order of importance, are:   
 1. accessing a variable in a data set using df$variable  
-2. subsetting using []  
+2. subsetting using [ ]  
 3. piping using %>%  
 It is valuable to know what you don't know and how to learn it; these topics are valuable but not basic enough for this brief introduction.  
 Knowing that these topics exist should give you the ability to research and learn them later, without being overwhelmed right now.  
