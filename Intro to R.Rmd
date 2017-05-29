@@ -4,74 +4,136 @@ author: "Elizabeth Gilbert"
 date: "May 26, 2017"
 output: html_document
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 ## Intro to R
-
-This is a brief and friendly introduction to R. Please note that while it is always valuable to learn more about how the R language is structured, this introduction intends to get you up and running very quickly.  
+This is a brief and friendly introduction to R.  
+Please note that while it is always valuable to learn more about how the R language is structured, this introduction intends to get you up and running very quickly.  
 
 This introduction will cover:  
 1. Downloading R and R Studio to code in R  
-2. Basic R syntax  
+2. Basic R syntax, including functions and data sets   
 3. Using packages for special functionality in R  
 4. Getting started with learning R in R  
 
-### Downloading R and R Studio
+### 1. Downloading R and R Studio
 R is what you will download to program in R. R Studio is the most popular IDE (Integrated Development Environment) for R.
 
-* link to R & R studio here
+Download R here: <https://cran.r-project.org/>   
+Download R Studio here: <https://www.rstudio.com/products/rstudio/download/> (choose RStudio Desktop Open Source License)
 
 Go ahead and launch your newly-downloaded R Studio and start your first **session** in R
 
-### Basic Syntax
-Now that you have everything ready and R Studio open, you don't want to be left in the dark or turned over to some online course without knowing any code. Here are the very basics of programming in R. 
+#### The layout of R Studio
+The way you code in R is either by writing a script or by typing in the command line. New scripts are found in the top left quadrant of R Studio; the command line is found in the "Console" tab which is by default in the bottom left quadrant of R Studio.  
+The right hand quadrants contain tabs which will desplay the variables you've created, the packages you've installed, plots and visualizations, and help/documentation. 
 
+### 2. Basic Syntax
+Now that you have everything ready and R Studio open, here are the very basics of programming in R. 
 ```{r}
 # The pound symbol starts a comment
 # Comments are useful to describe your code, like this:
 x <- 1 # assigned 1 to variable x
 x # printed x
 ```
-
 You just learned comments, initializing variables, and printing variables. Here's what you should know:  
 1. In R, you don't declare a type for your variables; in our example, we didn't specify that variable x was of the type integer.   
 2. Assignment to a variable is done using the <- operator.   
 3. Typing just a variable name will print the contents of that variable.   
 
+#### Functions
+Many of the other things you will want to learn how to do in R involve functions. Here are just a couple of examples. 
+
 ```{r}
-View(quakes) 
-View(swiss) 
-View(volcano) 
-View(WorldPhones) 
-View(ChickWeight) 
+list <- c(1, 3, 5, 4, 2) # c() combines a list of elements
 ```
 
-### Using Packages
+Mathematical functions:
+```{r}
+mean(list)
+sd(c(1, 3, 5, 4, 2)) # input can be a variable, or a list using the c() function
+```
+
+There also exists functions to plot data such as plot() and hist(). 
+```{r, include=FALSE}
+# TO DO **********************************************
+
+# demo plot() and hist() and explain df$variable and subsetting with [] here!!
+
+# don't forget to remove the other topics section
+```
+
+#### Working with Data
+If you have your own data you want to start analyzing in R, you can import it. The most common way to import your own data is to use the read.csv() command. 
+```{r}
+df <- read.csv("C:\\Users\\eaber\\Documents\\Data Analytics\\test data.csv") # df is for the object type data frame
+```
+Remember to use double back slashed in your file address, and include the .csv extension at the end of the address.
+
+R also comes with built in data sets. Some interesting ones are called "quakes", "swiss", "volcano", "WorldPhones", and "ChickWeight". These are valuable to play around with and practice your skills on. 
+
+Functions that are valuable for viewing your data include
+```{r}
+# View(df) # opens the data set in a new tab
+head(quakes) # gets the first 6 rows without opening the data in a new tab
+names(swiss) # gets the list of variable names without opening the data in a new tab
+```
+
+#### Problem Solving
+One of the other most valuable things to know is how to learn and solve problems that arise when coding in R.  
+For packages, you can always go to Help > Cheatsheets in R Studio for PDF cheat sheets on the R packages you have installed. 
+For functions, and the built in R data sets, you can type the function preceeded by a question mark to get help documentation on it in R Studio. 
+```{r}
+# ?c # functions
+# ?mean
+
+# ?quakes # built in data sets
+# ?swiss
+```
+
+### 3. Using Packages
 The functions that come with R when you download it are called "Base R". They can do a lot, but there are many more things you can do with R by using packages. 
 
 You have to load them in every new session, but you only have to install them once. 
 
-One of the most useful packages is X. Let's install it now.
-
-* install
-
-Eventually, you will probably accumulate many packages, such as the widely popular ggplot2, which can make fancy grpahics like this:
-
-* example
-
-### Learn R in R
-
+One of the most useful packages for beginners is swirl. Let's install it now.
 ```{r}
 # install.packages("swirl")
-# library(swirl)
-# swirl()
+```
+When installing a new package, remember to use the function install.packages() and include the package name in quotations. 
+Eventually, you will probably accumulate many packages, such as the widely popular ggplot2 for visualization.
+```{r, include=FALSE}
+# TO DO **********************************************
+
+# "which can make fancy grpahics like this: "
+
+# * example
 ```
 
-### Conclusion
-You may want to do x, y, or z  
+### 4. Learn R in R
+Since you already have the swirl package installed, you can load it with
+```{r}
+# library(swirl)
+```
+and then call the swirl function
+```{r}
+# swirl()
+```
+to launch the tutorial
 
-This introduction was written using R Markdown. Markdown is a very simple syntax for formatting HTML, PDF, and Word documents with R code: see <http://rmarkdown.rstudio.com> for more on R Markdown.  
+#### Other Topics
+Three topics that you may consider researching before coming across them in swirl, in order of importance, are:   
+1. accessing a variable in a data set using df$variable  
+2. subsetting using []  
+3. piping using %>%  
+It is valuable to know what you don't know and how to learn it; these topics are valuable but not basic enough for this brief introduction.  
+Knowing that these topics exist should give you the ability to research and learn them later, without being overwhelmed right now.  
+
+### Conclusion
+You may now want to try viewing data in R, research and test out the additional R topics listed, or start practicing with the swirl tutorial. Any is a great way to build your experience and comfort in R.   
+
+This introduction was written using R Markdown. Markdown is a very simple syntax for formatting HTML, PDF, and Word documents with R code and can be installed with install.packages("markdown"). See <http://rmarkdown.rstudio.com> for more on R Markdown.  
+
+This introduction was created on May 29th, 2017 by Elizabeth Gilbert
   
